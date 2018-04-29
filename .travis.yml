@@ -1,0 +1,9 @@
+sudo: required
+dist: trusty
+
+addons:
+  apt:
+    packages:
+    - speedtest-cli
+script:
+    - speedtest
