@@ -1,9 +1,12 @@
+language: python
+python:
+  - "2.6"
+  - "3.6"
 sudo: required
 dist: trusty
 
-addons:
-  apt:
-    packages:
-    - speedtest-cli
+install:
+- pip install speedtest-cli
+
 script:
     - speedtest
