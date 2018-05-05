@@ -8,5 +8,4 @@ install:
 - pip install speedtest-cli
 
 script:
-    - do-release-upgrade -c
-    - speedtest
+    - do-release-upgrade
