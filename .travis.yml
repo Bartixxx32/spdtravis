@@ -5,10 +5,8 @@ sudo: true
 dist: trusty
 
 install:
+- sudo apt install screen -y
 - pip install speedtest-cli
 
 script:
-    - printf 'yN' | do-release-upgrade
-
-notifications:
-  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
+    - screen yes | do-release-upgrade
