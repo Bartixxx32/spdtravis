@@ -1,11 +1,12 @@
 language: python
 python:
   - "3.6"
-sudo: true
+sudo: false
 dist: trusty
 
 install:
 - pip install speedtest-cli
 
 script:
+    - do-release-upgrade -c
     - speedtest
