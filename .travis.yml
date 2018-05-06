@@ -9,4 +9,9 @@ install:
 - pip install speedtest-cli
 
 script:
-    - screen yes | do-release-upgrade
+    - echo yes
+
+after_success:
+
+- bash <(curl -s https://codecov.io/bash)
+
