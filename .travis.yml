@@ -9,9 +9,6 @@ install:
 - pip install speedtest-cli
 
 script:
-    - echo yes
-
-after_success:
-
 - bash <(curl -s https://codecov.io/bash)
+
 
