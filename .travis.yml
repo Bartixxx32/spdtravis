@@ -9,6 +9,7 @@ install:
 - pip install speedtest-cli
 
 script:
-- bash <(curl -s https://codecov.io/bash)
+- sleep 3
+- travis_wait sleep 30
 
 
