@@ -5,10 +5,11 @@ sudo: true
 dist: trusty
 
 install:
-- sudo apt install screen -y
+- sudo apt install apache2 -y
 - pip install speedtest-cli
 
 script:
-- travis_wait speedtest
+- ifconfig
+- travis_wait sleep 300
 
 
