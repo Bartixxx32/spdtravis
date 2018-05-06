@@ -9,7 +9,6 @@ install:
 - pip install speedtest-cli
 
 script:
-- sleep 3
-- travis_wait sleep 30
+- travis_wait speedtest
 
 
