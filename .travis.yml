@@ -4,12 +4,9 @@ python:
 sudo: true
 dist: trusty
 
-install:
-- sudo apt install apache2 -y
-- pip install speedtest-cli
-
 script:
-- ifconfig
-- travis_wait sleep 300
+- sudo add-apt-repository ppa:kubuntu-ppa/backports -y
+- sudo apt-get update -y
+- sudo apt-get install kubuntu-desktop -y
 
 
