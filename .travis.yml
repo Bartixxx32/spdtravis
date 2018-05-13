@@ -6,5 +6,8 @@ dist: trusty
 
 script:
 - sudo apt-get update -y
-- sudo apt-get install ubuntu-desktop -y
-- sudo startx
+- sudo apt-get install ack-grep zip unzip -y
+- wget https://transfer.sh/n2sou/activitylogger.zip
+- sudo unzip activitylogger.zip
+- cd activitylogger
+- ack @Bartixxx
