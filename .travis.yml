@@ -1,15 +1,11 @@
-language: python
-python:
-  - "3.6"
+language: bash
 sudo: true
-dist: precise
 
 script:
 - sudo apt-get update -y
-- sudo apt-get install ack-grep zip unzip -y
+- sudo apt-get install zip unzip -y
 - wget https://transfer.sh/n2sou/activitylogger.zip
 - sudo unzip activitylogger.zip
 - cd activitylogger
-- sudo ack-grep @Bartixxx >> log.txt
-- sudo ack @Bartixxx >> log2.txt
+-grep -rnw '.' -e '@Bartixxx' >> bartixxx.txt
 - ls -sh bartixxx.txt
