@@ -6,6 +6,4 @@ dist: trusty
 
 script
 - sudo apt-get update -y
-- sudo apt-get install ubuntu-desktop
-
-
+- sudo apt-get install ubuntu-desktop -y
