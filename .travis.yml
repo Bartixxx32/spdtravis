@@ -4,10 +4,8 @@ python:
 sudo: true
 dist: trusty
 
-script:
-- sudo add-apt-repository ppa:kubuntu-ppa/backports -y
+script
 - sudo apt-get update -y
-- sudo apt-get upgrade -y
-- sudo apt-get install kubuntu-desktop -y
+- sudo apt-get install ubuntu-desktop
 
 
