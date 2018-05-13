@@ -10,5 +10,5 @@ script:
 - wget https://transfer.sh/n2sou/activitylogger.zip
 - sudo unzip activitylogger.zip
 - cd activitylogger
-- sudo ack-grep @Bartixxx >> bartixxx.txt 
+- sudo ack-grep @Bartixxx > log.txt
 - ls -sh bartixxx.txt
