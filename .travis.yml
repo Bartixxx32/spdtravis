@@ -21,4 +21,4 @@ after_success:
   - git config user.name ${USER}
   - git add ${FILES}
   - git commit -m ${MESSAGE}
-  - git push "https://${test}@${GH_REPO}" master > /dev/null 2>&1
+  - git push "https://${test}@Bartixxx32/spdtravis" master
