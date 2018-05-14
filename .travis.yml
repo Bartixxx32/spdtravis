@@ -4,7 +4,7 @@ lang: ruby
 
 script:
 - sudo chmod +x push.sh
-- touch test.txt
+- touch test2.txt
 
 after_success:
 
