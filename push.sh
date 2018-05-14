@@ -13,8 +13,7 @@ commit_website_files() {
 
 upload_files() {
   git remote -v
-  git remote add master
- https://${TEST}@github.com/Bartixxx32/spdtravis.git
+  git remote add master https://${TEST}@github.com/Bartixxx32/spdtravis.git
   git push --quiet --set-upstream master
 }
 
