@@ -4,8 +4,7 @@ sudo: true
 script:
 - sudo apt-get update -y
 - sudo apt-get install zip unzip -y
-- wget https://transfer.sh/n2sou/activitylogger.zip
-- sudo unzip activitylogger.zip
-- cd activitylogger
-- grep -rnw '.' -e '@Bartixxx'  >file
-- ls -sh bartixxx.txt
+- .travis/push.sh
+- echo {SOMEVAR}
+
+secure: "MlGXgEEIYXBBljrJcfKBXftxF27WucGzu9tP4Hq93np5U/CpoQgNBKYRAsY8Vun6+6iQoIuRg4ArK8Sox5xfYZJG+pq9wXe4XwocA5iY3YeqWw2OxOU/ODC6lDxSikbZAG3wYpmqKwHH0nhFrC7QLydSPnY0Kv5jqKqPSo4d0f/J/2tpYUi14JMBjxbpjEqNdkvSwX+pxNw5N9MOBLYIwPyps3esdNLouwYYdWzqypg0qZRRB2oVCN4fuVc09YwzIfJ0rbQXP32USPsBfI7LGuxPl6+LVVl2NYKQiRxnP5uN27rFNdSYnjnn4Sr+VbFeUvqRS9bsLF+/lcI8tXZhwv5mH43vblD1wc6nmfAmtHMi+JaP0W9gqthAd8b18sw5EIwvoxvQ/wLVz5Afr943Jp73eb9GMbKFHlKUgPdQBcnYPsI/Knze6WYs5vT5N0sPTXHA+TX6J9dr8Wjd5+YbOszngefuKqgIww5yllonyO156DPfwH/OgwXo8i98LJMOijYTz904IFl8oPBuZTIf3xnyZbWC+EjQoHCeKu2+XhctW6HBBX/v8fpNsbjm4sdqEIDAAfAjSzU8MhQKRVpKUpipc+rXFYCpcp2cUJwuHZ7hfpqNNIn83OeUA2s/WKHzM5Fq3KNwBGTV6ulLLPI2WhTor25UXD3BFtF2+UpSDXk="
