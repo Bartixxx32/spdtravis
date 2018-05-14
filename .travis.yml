@@ -1,24 +1,17 @@
-language: ruby
-rvm:
-  - 2.0.0
-env:
-  global:
-  - USER="Bartixxx32"
-  - EMAIL="mcbplay1@gmail.com"
-  - REPO="spdtravis"
-  - FILES="test.txt"
-  - GH_REPO="github.com/${USER}/${REPO}.git"
-  - secure: "Nulk6ZZWOKT1wMe8/4P5G6nR+w1dnZcHNq/GgsSrMGmeNM0NKfE0xDdlz7pragyHrshE1wdr1R5Ctmxp+/43TJSf4PMnEUv7imDmynvktHcMBUE1BRmX8I5jZn0Pk+Qyzra9ApShw26bassqSDmrA2ee8+JpDRQtX2xEow54BokDwfWqtQIuSfHUQxmjBiWIKKtlNTCCwmZDBohY9DpA91ZYx1huBbaN7s7FItOOAufXXTJFpm7gQLjk2/xx4/szcq160iQzO0ASGYzlD75539L4A9OOfWgPAxL6x8CHIZ5WX1yrxGXiKZSWgQ8pB4xMNs4t/u45qRmK/fNYOuOWRr81Yth9EKngmVkPFixxpTGwNbf8heuid1RNd3Fh/lvdrv/o3kQNoRZd7wcOLVwx/bblFDSTS92av1EuXlNAlZDOoLGcrZWyarZ7zakoyFry5W3ckn6Nlxhr/vJ2Fq3m4YMNJTqdDLKcLIIrqdaCLsZmH+dMcUzOe82pET1/wNFxdKf0L4U31TfkYGdaw6DytY/n2ZoGrqBTR6rrZ3YRVs++VRZsY0IoGfrScCdpwWPQxFrOhbAzlU58jBMiLnWZuNeSmvkO9GakH4zuDHtxY4mggg475WIpWchMckdJuBxK0Lu0dsdtBVy6lbog7QROPF40le5sWKPKnorEl+lBghs="
+# Ruby is our language as asciidoctor is a ruby gem.
+
+lang: ruby
+
 script:
-  - touch test.txt
+- sudo chmod +x push.sh
+- touch test.txt
+
 after_success:
-  - MESSAGE=test
-  - git clone git://${GH_REPO}
-  - mv -f ${FILES} ${REPO}
-  - cd ${REPO}
-  - git remote
-  - git config user.email ${EMAIL}
-  - git config user.name ${USER}
-  - git add ${FILES}
-  - git commit -m ${MESSAGE}
-  - git push "https://${test}@${GH_REPO}" master > /dev/null 2>&1
+
+- ./push.sh
+
+env:
+
+global:
+
+secure: hZJlqgOzA2zIUJSWIka0PylqNaTkfHq+kS48RrHmocrK0vLyCW7ECWrzez2f2RVdTNzPi0b+yJq2uCbFfWjImZqg+XY1I75/CVVdSYMk7PJkYZ/iBDixMYY8CAkRRd5yZft9uZAdZzR4KLCPN18n7qfISv/M9VA8989NKcVyiEU=
