@@ -7,13 +7,13 @@ setup_git() {
 
 commit_website_files() {
   git checkout -b master
-  git add . test.txt
+  git add . test2.txt
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
 upload_files() {
   git remote -v
-  git remote add origin
+  git remote add master
  https://${TEST}@github.com/Bartixxx32/spdtravis.git
   git push --quiet --set-upstream master
 }
