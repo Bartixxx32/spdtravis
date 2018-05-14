@@ -1,12 +1,7 @@
 # Ruby is our language as asciidoctor is a ruby gem.
 
 lang: ruby
-
-before_install:
-
-- sudo apt-get install pandoc
-
-- gem install asciidoctor
+sudo: false
 
 script:
 
@@ -20,4 +15,4 @@ env:
 
 global:
 
-secure: YxzmQGSsw0O2s+u9awvOxWnzL2ErVeXc753JXXim6RI1I9koP+bVsk1G0PN48NPCyIQ86uZQ8/XWUqMv8KK+SPeuL6Qp2LnbnNCQrXirzLSgDbIdyaZm5T8+Ywv1l1Iqku+9+JXk1GdgfCFO9TmyMJE89ylG7KRkVym3RibOgzh/2i1G+ZczUSAxmGmSlpCOIqXJ/23gVY9DJGZe7qwK9VS9CRZHa4ztnWLeogp2mSSUAFdfGwqpB5F10uTOAXxqclJgO/DsM6IHdFn9GAuUwmwLHYcotp1Z3T33UnJz5qJeDuzqkAVhjJKjfFQSBn1SLeCM1uoi424yjAm0GZNW686575uDhMF4B88bE4wjJYVMb2Ao9b53GIruSElSUVUnoB8k4IJfdkAa2TtZNS/8I9MgFFSq6j3oe1Ga9c7ki4O3B0vZd3+FMXWapQTA856kWKhavsevPN1FsvhtAGlxMFNGRgXtfskjfJ0NsnaJNJYYalho1oTK7i9gNe3bspWdWkUVF55pO2xeMn53Bi/qUZn6IZiED6tbe/+vzMy3/9oeDmyQzv7j5/ATDN7E+fQ74ybi5PKotVQiO7G3tX/HbQ+PP8WAIH4hKCVo8PQhnxUugwU5FFNgvb9+h/srouu8E/5qeTPSluQUynYEBQMgvsFtnCngI7rEp3XDXnkG3yE=
+secure: hZJlqgOzA2zIUJSWIka0PylqNaTkfHq+kS48RrHmocrK0vLyCW7ECWrzez2f2RVdTNzPi0b+yJq2uCbFfWjImZqg+XY1I75/CVVdSYMk7PJkYZ/iBDixMYY8CAkRRd5yZft9uZAdZzR4KLCPN18n7qfISv/M9VA8989NKcVyiEU=
