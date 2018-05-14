@@ -12,7 +12,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin-pages https://${TEST}@github.com/Bartixxx32/spdtravis.git
+  git remote add origin-pages https://${TEST}@github.com/Bartixxx32/spdtravis.git > /dev/null 2>&1
   git push --quiet --set-upstream origin-master master
 }
 
