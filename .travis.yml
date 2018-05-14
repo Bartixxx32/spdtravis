@@ -1,11 +1,24 @@
-language: bash
-sudo: true
-
-script:
-- sudo apt-get update -y
-- sudo apt-get install zip unzip -y
-- sudo chmod +x push.sh
-- touch test.txt
-- ./push.sh
+language: ruby
+rvm:
+  - 2.0.0
 env:
-  secure: "CTLRUEhgdmWjAvVXG0cun8gGPZrDNuBi7Mdi3UUPRB+rCnbt5tre0VPM/yGOVOxs7QUUQk+b89OAct7qmtvKWqEg0M2O8MGfQ0yIS3ak7v6XfedhU+6io3VEsfDFp6IglQFM3cVw0VpRK3glPO+7GkIGTAzBCFjmKlaphUAcs/s9lzZ5MopwaH7nmxNzKa55H7kAvd1TzTBEHnkNNxP4Zq4DkQ4USvwGmbYyi4HTQkBFGdKWmekXdwjDSyqOkfeLg8cmA13wec0K9yw5JnVbsYCA8nDHjTGsUgQoiVbSXyGX/O1gLwAc/hXiK9ZZbe2Cuuo5DniVuMeoInY1lXObVelR9QY8XkIkMX+TCP9bIBadVR0uQdfFIiqcLvOfdW0AgwhXmht3r3WpKbMaEJTrEOViJdoG9jKLIdx/9hlzFgpsuoyqmBGhmNwcmAuF0MUqAhJJz80IHvBmFkIbrruAEqYRu2Lsy32E8RbH6M3HO+M23Od2TupAMqheKuICIIz6T3CqlehzThV99mHm3ri7QKE6zM+6n35c7yUgpgwQffnMCr4CvkikXNh19G8HUU0C96zB3D1KmlzQuB34M9W1PvSC7iqayc7WUUQQIuxJgHbpjsrVtCI7WxJeyd+ZJOlH2koPkBAt+o4ZEX7bc8uPfleTML+6oLJ8r9DzTchYQwU="
+  global:
+  - USER="Bartixxx32"
+  - EMAIL="mcbplay1@gmail.com"
+  - REPO="nspdtravis"
+  - FILES="test.txt"
+  - GH_REPO="github.com/${USER}/${REPO}.git"
+  - secure: "PhLdKO2lu5ytKJRRtC2Sr4jkb3V5CZRdvIahI7RpL7Ek1Lh271qANNl46lRQiTOzJOoawLv0Oem71u4BAGBHeZuKUF0KATgUQouafnsZd6Wpxzv+N/lL/A/byJ+cBVAt+YCsc89NsbGML2ypxDraJrF3Finf+udRc6Fsr9QQUxCBnXIJterFYFzx+IcN4TVO7JOcjAE4loo4N97HKlMfsRzdkkSpRsPGz+9iJY8exqOr3Wk3VcUz3WWTd4vss83/zPir18Jx03/nZJxPApNJOtUrT99ELLyFVtwx44RuxCVBJfW1aXr/2sVidgAmQeyyoxVzG0c3XfL5MRqpf4vYQcl9ATGxTlNnzsUOXOs/CPgC4w4W5xhZgovl63MrFVGPbNwr6jLbqk7UvuK9kSFR4YPHanxkqhI/+Rogg0rVtAyzBtXdeM6eUd24SrffOgP796UZZeYuMOIyKEa3ckDnCfVO6NO7d0AGiCO8GulDQCk0zble2UK2A6LIj6x2AVE/AfebWulbMnrW0RWLiBFD/+aN14VcjeIiAxxjq9NKASUl2Ry9KnsC/MfqPuq4CjgoYRsjawy8PH4QTAnws2iKeoZlSFwvWFZGvN40LTZ00J146W74w1hXM3yuiCQrryOcKl6AUh1KWXUmql4hudm+bE3IOsT9bEFBLQFWlNUp4qs="
+script:
+  - echo t
+after_success:
+  - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
+  - git clone git://${GH_REPO}
+  - mv -f ${FILES} ${REPO}
+  - cd ${REPO}
+  - git remote
+  - git config user.email ${EMAIL}
+  - git config user.name ${USER}
+  - git add ${FILES}
+  - git commit -m ${MESSAGE}
+  - git push "https://${SOMEVAR}@${GH_REPO}" master > /dev/null 2>&1
