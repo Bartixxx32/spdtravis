@@ -25,6 +25,7 @@ script:
 - echo done
 - chmod +x push.sh
 - ./push.sh
+- echo done
 
 addons:
   apt:
