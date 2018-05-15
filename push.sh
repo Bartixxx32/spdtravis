@@ -9,6 +9,6 @@ commit_website_files() {
   git checkout master
   git add test2.txt
   git commit -m tylkotest
-
+}
 setup_git
 commit_website_files
