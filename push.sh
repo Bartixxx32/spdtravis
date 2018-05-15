@@ -10,7 +10,10 @@ commit_website_files() {
   cd spdtravis
   git checkout master
   touch test.txt
-  git add . test.txt
+  touch test1.txt
+  touch test2.txt
+  touch test3.txt
+  git add . *.txt
   git commit --m testtravis
 }
 
