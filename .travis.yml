@@ -1,9 +1,10 @@
 
 # Ruby is our language as asciidoctor is a ruby gem.
 lang: ruby
+sudo: true
 script:
   - echo test
-  - chmod +x push.sh
+  - sudo chmod +x push.sh
   - touch test.txt
 after_success:
   - ./push.sh
