@@ -1,17 +1,9 @@
-sudo: required
+sudo: false
 dist: trusty
 language: bash
 script:
 
 - echo $test
-
-addons:
-  apt:
-    packages:
-    - zip
-    - unzip
-    - ncftp
-    - p7zip-full
     
 
 notifications:
