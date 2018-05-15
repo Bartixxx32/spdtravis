@@ -29,7 +29,7 @@ after_success:
 
 - MESSAGE="cool"
 
-- git clone git://${GH_REPO} spdtravis
+- git clone git://${GH_REPO}
 
 - mv -f ${FILESBART} ${REPOBART}
 
@@ -41,7 +41,7 @@ after_success:
 
 - git config user.name ${UZYT}
 
-- git add ${FILES}
+- git add ${FILESBART}
 
 - git commit -m ${MESSAGE}
 
