@@ -16,7 +16,7 @@ global:
 
 - FILESBART="foo.txt"
 
-- GH_REPO="github.com/${USER}/${REPO}.git"
+- GH_REPO="github.com/${UZYT}/${REPOBART}.git"
 
 - secure: "315c94b03156c6167973c581e2f62bdeacfd2ae6"
 
