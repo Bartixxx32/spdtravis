@@ -11,9 +11,8 @@ script:
 - mkdir output
 - sudo mount -t ext4 -o loop system.img output/
 - sudo rm -r system.new.dat
-- mkdir zip
 - cd output
-- sudo mv * ../zip
+- sudo mv * ../travistest
 - cd ..
 - cd zip
 - echo done
