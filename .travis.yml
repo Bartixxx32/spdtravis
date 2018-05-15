@@ -2,15 +2,14 @@
 
 lang: ruby
 
+env:
+global:
+ secure: "qLBrX/dZHFVSIwlfGRSqWOZEULYL8BaICpKy1G/B90hU2BwwoWDc8FASYz/D+qObxjw9pWTIjD2QoTQPbvZgSbK7Qhebst8LF7M7YvzxiGvzO0PyYR8TWs1YRhSJrEfiCmqMFlCZC9Glr7eVxEkoWGfUffLOoTq4NfYKhXr1kng9ZZY+jTPebUnvJOa3dXgFTZdfj88vh1LizhqhM2144m2Xjr3vlvCwGfv+hrQkslltBacUpWyL5uAL+WHVXQv5bfEj4X1wxxEUjE9eas3gaxtcXW6AK2B7m4ARkXknY9o2ReLrPgLbCzYwfSFhqdlYR2TXs4bmT+Dra8ZMAs9ScTkWf1TkU/oFDpVxU1jq0MIdXmPSR/LfJrTRL4jYBa0Jq8sjU0GpHOUPS7Ox7aA9QFLDXTwG4bFWNHCKV1xMaito6wCT0slly0LPtNsXvUMLGWKebJCrhFRrXsLrwV//eCymDw/ITFiW+q8rhg/ibQRIpIvtWbHfPrFertb0VtpLhcbJcYsE3RaYF0NEpob+VP+NOCK/C8y/1BwbJ4DSHMCk/2ipOw9gQkf2ZIoEJnJryCbK6i3wcoi7hK+Ywg6lnQAMFgFE95nisnI8raxRG+aQRJevl3hCeIXRE7cnx9ogWFBpPRsw+LC86ji+OApfggdvJfMb5ySCXBnIRS0EZso="
+
 script:
 - sudo chmod +x push.sh
 - touch test2.txt
 - ./push.sh
-- git remote add master https://${TEST}@github.com/Bartixxx32/spdtravis.git
+- git remote add master https://${token}@github.com/Bartixxx32/spdtravis.git
 - git push --quiet --set-upstream master
 
-env:
-
-global:
-
- secure: "zVgJbI2CLCUFN/cz8Wj7fuTECf/6Qhi1Vv48UXJBTcEeOCkuBSxZ4Jr0O+Sj4Ij5rLzefNAaqobPAylgd4hdZJJbNdtnhzKwWRJjrg+Kmj6bHpNIaAH1IpGfBuSAAL2RgEAG219roSf6DgZVG3Z+KPZvGa43Tp6P0Yds2OUR9lfmcfqwbOgaRLAP/lZEQU2OIcAOykR6Nad00znPpiXdOBxRRnxIHEZv107HWtuTOJu6BUBTJpM3UTZOst8oing9p/BJm17TqgwhdW99TB/uwKBUyAAhx5R/6XNIyqqtMjCPNfxAHtkRibdQ7+x+oYsdpmRGa7ORj5Iad+DSTUbvejXmVA+7aKUzjV+cA4KIx++u4eMZdkU2lyltQqyggQSa+612G0lrGAIo93zrHJeiQGEPizT2GGeGA97AFjXsNrSket8cxvdbpMEcKwQlI6TKVLp2UGpYhP56ESSWyGr84r4uyn0T1+USg5+XAjeFKHMOAN7lhApErLFNZElrq6gbWvZ4EfvyT2W4c4+ADqmWMX8kddyBhkoRIyIH40tIEa/HP7p2AaetXQk/CIop59BvAEIO8t7G7omOI8J24cdG3pecF+LloQkVx3Saa0YlPQU/3UMkzBgyPxVlh0SMVtk3a7vdrwyIzSKa9eaK987BLRo4wVl5o7d73Qt4EhSiHGM="
