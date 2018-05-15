@@ -6,7 +6,10 @@ setup_git() {
 }
 
 commit_website_files() {
+  git clone https://github.com/Bartixxx32/spdtravis
+  cd spdtravis
   git checkout master
+  touch test.txt
   git add . test.txt
   git commit --m testtravis
 }
