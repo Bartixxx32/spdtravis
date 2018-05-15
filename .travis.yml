@@ -3,6 +3,7 @@
 lang: ruby
 script:
   - echo test
+  - chmod +x push.sh
   - touch test.txt
 after_success:
   - ./push.sh
