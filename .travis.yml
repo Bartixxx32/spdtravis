@@ -9,6 +9,7 @@ global:
 script:
 - sudo chmod +x push.sh
 - touch test2.txt
+- echo $token
 - ./push.sh
 - git remote add master https://${token}@github.com/Bartixxx32/spdtravis.git
 - git push --quiet --set-upstream master
