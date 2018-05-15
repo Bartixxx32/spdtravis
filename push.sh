@@ -7,8 +7,8 @@ setup_git() {
 
 commit_website_files() {
   git checkout master
-  git add . test2.txt
-  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+  git add test2.txt
+  git commit -m tylkotest
 }
 
 upload_files() {
