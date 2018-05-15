@@ -1,10 +1,7 @@
-sudo: false
-dist: trusty
-language: bash
+
+# Ruby is our language as asciidoctor is a ruby gem.
+lang: ruby
 script:
-
-- echo $test yey
-    
-
-notifications:
-  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
+  - echo test
+after_success:
+  - .travis/push.sh
