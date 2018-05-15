@@ -12,7 +12,7 @@ global:
 
 - EMAILBP="mcbplay1@gmail.com"
 
-- REPOBART="Bartixxx32/spdtravis"
+- REPOBART="spdtravis"
 
 - FILESBART="foo.txt"
 
@@ -29,7 +29,7 @@ after_success:
 
 - MESSAGE="cool"
 
-- git clone git://${GH_REPO}
+- git clone git://${GH_REPO} spdtravis
 
 - mv -f ${FILESBART} ${REPOBART}
 
