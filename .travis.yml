@@ -18,6 +18,10 @@ script:
 - cd output
 - sudo mv * ../one
 - cd ..
+- mv one/* travistest/
+- cd travistest
+- ls
+- cd ..
 - echo done
 - chmod +x push.sh
 - ./push.sh
