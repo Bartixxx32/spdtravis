@@ -12,9 +12,12 @@ script:
 - sudo mount -t ext4 -o loop system.img output/
 - sudo rm -r system.new.dat
 - cd output
-- sudo mv * ../travistest
 - cd ..
-- cd zip
+- mkdir one
+- cd output
+- sudo mv * ../one
+- 
+- cd 
 - echo done
 - chmod +x push.sh
 - ./push.sh
