@@ -9,12 +9,6 @@ commit_website_files() {
   git checkout master
   git add test2.txt
   git commit -m tylkotest
-}
 
-upload_files() {
-  git remote add master https://${TEST}@github.com/Bartixxx32/spdtravis.git
-  git push --quiet --set-upstream master
-}
 setup_git
 commit_website_files
-upload_files
