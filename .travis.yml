@@ -5,4 +5,4 @@ script:
   - echo test
   - touch test.txt
 after_success:
-  - .travis/push.sh
+  - ./push.sh
