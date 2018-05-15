@@ -6,10 +6,9 @@ setup_git() {
 }
 
 commit_website_files() {
-  mv one/* travistest/
   cd travistest
   git checkout master
-  git add . *.txt
+  git add . *
   git commit --m testtravis
 }
 
