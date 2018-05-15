@@ -3,7 +3,7 @@ dist: trusty
 language: bash
 script:
 
-- echo $test
+- echo $test yey
     
 
 notifications:
