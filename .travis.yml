@@ -1,49 +1,47 @@
-language: ruby
-
-rvm:
-
-- 2.0.0
-
-env:
-
-global:
-
-- UZYT="Bartixxx32"
-
-- EMAILBP="mcbplay1@gmail.com"
-
-- REPOBART="spdtravis"
-
-- FILESBART="foo.txt"
-
-- GH_REPO="github.com/${UZYT}/${REPOBART}.git"
-
-- secure: "315c94b03156c6167973c581e2f62bdeacfd2ae6"
-
+sudo: required
+dist: trusty
+language: bash
 script:
+- wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_011_all_1804241056_a51d076815af4ea9.zip -O one.zip
+- unzip one.zip
+- sudo rm -r one.zip
+- wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
+- chmod +x *
+- ./sdat2img.py system.transfer.list  system.new.dat
+- mkdir output
+- sudo mount -t ext4 -o loop system.img output/
+- sudo rm -r system.new.dat
+- mkdir zip
+- cd output
+- sudo mv * ../zip
+- cd ..
+- cd zip
+- echo .
+- sudo zip -r file.zip -s 1000m *
+- echo .
+- echo .
+- echo .
+- echo .
+- echo .
+- curl --upload-file ./file.zip https://transfer.sh/file.zip
+- curl --upload-file ./file.z01 https://transfer.sh/file.z01
+- md5sum file.zip
+- md5sum file.z01
+- echo .
+- echo .
+- echo .
+- echo .
+- echo .
+- echo done
 
-- echo t
-- touch foo.txt
+addons:
+  apt:
+    packages:
+    - zip
+    - unzip
+    - ncftp
+    - p7zip-full
+    
 
-after_success:
-
-- MESSAGE="cool"
-
-- git clone git://${GH_REPO}
-
-- mv -f ${FILESBART} ${REPOBART}
-
-- cd ${REPOBART}
-
-- git remote
-
-- git config user.email ${EMAILBART}
-
-- git config user.name ${UZYT}
-
-- git add ${FILESBART}
-
-- git commit -m ${MESSAGE}
-
-- git push "https://${token}@${GH_REPO}" master > /dev/null 2>&1
-
+notifications:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
