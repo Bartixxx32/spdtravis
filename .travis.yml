@@ -1,8 +1,7 @@
 sudo: required
 dist: trusty
 language: bash
-
-script: 
+script:
 - wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_012_all_1805141050_84f43f7d02ff4c08.zip -O one.zip
 - unzip one.zip
 - sudo rm -r one.zip
@@ -17,24 +16,11 @@ script:
 - sudo mv * ../zip
 - cd ..
 - cd zip
-- sudo rm -r app/Chrome/Chrome.apk
-- cd app/Chrome
-- sudo touch "removed +100mb.txt"
-- cd ../..
-- echo .
-- echo .
-- echo .
-- echo .
-- echo .
-- echo .
-- echo .
-- echo .
-- echo .
-- echo .
 - echo done
 - chmod +x push.sh
+- ./push.sh
 
-  addons:
+addons:
   apt:
     packages:
     - zip
@@ -42,6 +28,6 @@ script:
     - ncftp
     - p7zip-full
     
-    
-after_success:
-  - ./push.sh
+
+notifications:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
