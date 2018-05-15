@@ -2,37 +2,8 @@ sudo: required
 dist: trusty
 language: bash
 script:
-- wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_011_all_1804241056_a51d076815af4ea9.zip -O one.zip
-- unzip one.zip
-- sudo rm -r one.zip
-- wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
-- chmod +x *
-- ./sdat2img.py system.transfer.list  system.new.dat
-- mkdir output
-- sudo mount -t ext4 -o loop system.img output/
-- sudo rm -r system.new.dat
-- mkdir zip
-- cd output
-- sudo mv * ../zip
-- cd ..
-- cd zip
-- echo .
-- sudo zip -r file.zip -s 1000m *
-- echo .
-- echo .
-- echo .
-- echo .
-- echo .
-- curl --upload-file ./file.zip https://transfer.sh/file.zip
-- curl --upload-file ./file.z01 https://transfer.sh/file.z01
-- md5sum file.zip
-- md5sum file.z01
-- echo .
-- echo .
-- echo .
-- echo .
-- echo .
-- echo done
+
+- echo $test
 
 addons:
   apt:
