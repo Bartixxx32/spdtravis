@@ -13,10 +13,10 @@ script:
 - sudo rm -r system.new.dat
 - cd output
 - cd ..
+- git clone https://github.com/Bartixxx32/travistest
 - mkdir one
 - cd output
 - sudo mv * ../one
-- 
 - cd 
 - echo done
 - chmod +x push.sh
