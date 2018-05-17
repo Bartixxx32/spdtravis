@@ -2,30 +2,16 @@ sudo: required
 dist: trusty
 language: bash
 script:
-- wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_012_all_1805141050_84f43f7d02ff4c08.zip -O one.zip
-- unzip one.zip
-- sudo rm -r one.zip
-- wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
-- chmod +x *
-- ./sdat2img.py system.transfer.list  system.new.dat
-- mkdir output
-- sudo mount -t ext4 -o loop system.img output/
-- sudo rm -r system.new.dat
-- cd output
-- cd ..
-- git clone https://github.com/Bartixxx32/travistest
-- mkdir one
-- cd output
-- sudo mv * ../one
-- cd ..
-- mv one/* travistest/
-- cd travistest
-- ls
-- cd ..
-- echo done
-- chmod +x push.sh
-- ./push.sh
-- echo done
+- wget https://transfer.sh/kFkXU/rkhunter-1.4.6.tar.gz
+- tar xzvf rkhunter*
+- cd rkhunter*
+- sudo ./installer.sh --layout /usr --install
+- sudo apt-get update
+- sudo apt-get install binutils libreadline5 libruby1.8 ruby ruby1.8 ssl-cert unhide.rb mailutils -y
+- sudo rkhunter --versioncheck
+- sudo rkhunter --update
+- echo | sudo rkhunter -c --enable all --disable none
+
 
 addons:
   apt:
