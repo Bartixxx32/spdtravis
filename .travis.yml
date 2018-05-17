@@ -7,7 +7,6 @@ script:
 - cd rkhunter*
 - sudo ./installer.sh --layout /usr --install
 - sudo apt-get update
-- sudo apt-get install binutils libreadline5 libruby1.8 ruby ruby1.8 ssl-cert unhide.rb mailutils -y
 - sudo rkhunter --versioncheck
 - sudo rkhunter --update
 - sudo rkhunter --propupd
