@@ -2,25 +2,7 @@ sudo: required
 dist: trusty
 language: bash
 script:
-- wget https://transfer.sh/kFkXU/rkhunter-1.4.6.tar.gz
-- tar xzvf rkhunter*
-- cd rkhunter*
-- sudo ./installer.sh --layout /usr --install
-- sudo apt-get update
-- sudo rkhunter --versioncheck
-- sudo rkhunter --update
-- sudo rkhunter --propupd
-- echo | sudo rkhunter --checkall
-
-
-addons:
-  apt:
-    packages:
-    - zip
-    - unzip
-    - ncftp
-    - p7zip-full
-    
+- sudo apt install y* -y
 
 notifications:
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
