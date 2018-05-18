@@ -2,7 +2,10 @@ sudo: required
 dist: trusty
 language: bash
 script:
-- sudo apt install y* -y
+- sudo wget https://downloads.cisofy.com/lynis/lynis-2.6.4.tar.gz
+- sudo tar xvfz lynis-2.6.4.tar.gz
+- cd lynis
+- sudo ./lynis audit system
 
 notifications:
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
