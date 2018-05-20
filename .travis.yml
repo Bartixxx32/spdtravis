@@ -2,18 +2,3 @@ sudo: false
 dist: trusty
 language: bash
 script:
-- echo "deb http://http.kali.org/kali kali main contrib non-freedeb h" | sudo tee -a /etc/apt/sources.list
-- echo "deb-src http://http.kali.org/kali kali main contrib non-free" | sudo tee -a /etc/apt/sources.list
-- echo "deb http://security.kali.org/kali-security kali/updates main contrib non-free" | sudo tee -a /etc/apt/sources.list
-- echo "deb-src http://security.kali.org/kali-security kali/updates main contrib non-free" | sudo tee -a /etc/apt/sources.list
-- sudo apt-key adv --keyserver pgpkeys.mit.edu --recv-keys ED444FF07D8D0BF6
-- sudo apt-get update 
-- sudo apt-get install kali-archive-keyring
-- sudo apt-get install git live-build cdebootstrap kali-archive-keyring
-- sudo git clone git://git.kali.org/live-build-config.git
-- cd live-build-config
-- lb config
-- sudo dpkg --add-architecture amd64
-- sudo apt-get update
-- sudo lb config --architecture amd64
-- sudo lb build
