@@ -2,9 +2,9 @@ sudo: false
 dist: trusty
 language: bash
 script:
-- mkdir /home/linuxbrew
-- git clone https://github.com/Linuxbrew/brew /home/linuxbrew/.linuxbrew
+- sudo mkdir /home/linuxbrew
+- sudo git clone https://github.com/Linuxbrew/brew /home/linuxbrew/.linuxbrew
 - PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-- chown -R $(whoami) /home/linuxbrew/.linuxbrew
+- sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew
 - brew update
 - brew install maven
