@@ -3,5 +3,6 @@ dist: trusty
 language: bash
 script:
 - sudo apt update -y
+- sudo apt-get install build-essential curl file git
 - sudo echo | sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 - brew install hello
