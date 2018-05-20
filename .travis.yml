@@ -13,4 +13,4 @@ script:
 - export LD_LIBRARY_PATH=$LINUXBREWHOME/lib64:$LINUXBREWHOME/lib:$LD_LIBRARY_PATH
 - which brew
 - echo $PKG_CONFIG_PATH
-- brew search xml
+- brew install --build-from-source htop
