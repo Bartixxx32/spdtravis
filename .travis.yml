@@ -5,7 +5,7 @@ script:
 - curl https://repogen.simplylinux.ch/txt/trusty/sources_414aca1de63d93d9c5fb8b5707cac82b76b1b8a2.txt | sudo tee /etc/apt/sources.list
 - sudo apt update
 - sudo apt upgrade -y
-- sudo apt-build install gedit
+- sudo apt-build install gcc
 addons:
   apt:
     packages:
