@@ -2,7 +2,7 @@ sudo: false
 dist: trusty
 language: bash
 script:
-- sudo apt-build install firefox
+- sudo apt-build install nano
 addons:
   apt:
     packages:
