@@ -5,7 +5,7 @@ jobs:
   include:
     - stage: ob1
       script: 
-      - wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_004_all_1801031407_e2352bc7493e4d48.zip -O one.zip
+      - wget -q http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_004_all_1801031407_e2352bc7493e4d48.zip -O one.zip
       - unzip one.zip
       - sudo rm -r one.zip
       - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
@@ -39,7 +39,7 @@ jobs:
       - echo done
     - stage: ob2
       script:
-      - wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_005_all_1801141242_0c19acb91a7d402d.zip -O one.zip
+      - wget -q http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_005_all_1801141242_0c19acb91a7d402d.zip -O one.zip
       - unzip one.zip
       - sudo rm -r one.zip
       - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
@@ -73,7 +73,7 @@ jobs:
       - echo done
     - stage: ob3
       script: 
-      - wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_006_all_1801292042_0848ac7a63b24cdd.zip -O one.zip
+      - wget -q http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_006_all_1801292042_0848ac7a63b24cdd.zip -O one.zip
       - unzip one.zip
       - sudo rm -r one.zip
       - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
@@ -107,7 +107,7 @@ jobs:
       - echo done
     - stage: ob4
       script: 
-      - wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_007_all_1803102230_5d5e5899febf4c9c.zip -O one.zip
+      - wget -q http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_007_all_1803102230_5d5e5899febf4c9c.zip -O one.zip
       - unzip one.zip
       - sudo rm -r one.zip
       - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
@@ -141,7 +141,7 @@ jobs:
       - echo done
     - stage: ob5
       script: 
-      - wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_008_all_1803250051_30ce618e28474fd8.zip -O one.zip
+      - wget -q http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_008_all_1803250051_30ce618e28474fd8.zip -O one.zip
       - unzip one.zip
       - sudo rm -r one.zip
       - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
@@ -175,7 +175,7 @@ jobs:
       - echo done
     - stage: ob6
       script: 
-      - wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_010_all_1804112056_629d3ed79d084775.zip -O one.zip
+      - wget -q http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_010_all_1804112056_629d3ed79d084775.zip -O one.zip
       - unzip one.zip
       - sudo rm -r one.zip
       - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
@@ -210,7 +210,7 @@ jobs:
       - echo done
     - stage: ob7
       script: 
-      - wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_011_all_1804241056_a51d076815af4ea9.zip -O one.zip
+      - wget -q http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_011_all_1804241056_a51d076815af4ea9.zip -O one.zip
       - unzip one.zip
       - sudo rm -r one.zip
       - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
@@ -244,7 +244,7 @@ jobs:
       - echo done
     - stage: ob8
       script: 
-      - wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_012_all_1805141050_84f43f7d02ff4c08.zip -O one.zip
+      - wget -q http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_012_all_1805141050_84f43f7d02ff4c08.zip -O one.zip
       - unzip one.zip
       - sudo rm -r one.zip
       - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
