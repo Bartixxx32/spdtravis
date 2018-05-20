@@ -2,13 +2,11 @@ sudo: required
 os: osx
 osx_image: xcode9.3
 language: bash
-before_install:
-- brew update
 jobs:
   include:
     - stage: ob1
       script: 
-      - brew upgrade
+      - brew upgrade &> /dev/null
       - wget -q http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_004_all_1801031407_e2352bc7493e4d48.zip -O one.zip
       - unzip one.zip
       - sudo rm -r one.zip
