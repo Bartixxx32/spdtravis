@@ -2,8 +2,8 @@ sudo: false
 dist: trusty
 language: bash
 script:
-- sudo mkdir /home/linuxbrew
-- sudo git clone https://github.com/Linuxbrew/brew /home/linuxbrew/.linuxbrew
+- mkdir /home/linuxbrew
+- git clone https://github.com/Linuxbrew/brew /home/linuxbrew/.linuxbrew
 - PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 - chown -R $(whoami) /home/linuxbrew/.linuxbrew
 - brew update
