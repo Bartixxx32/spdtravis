@@ -8,4 +8,4 @@ script:
 - sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew
 - brew update
 - brew upgrade
-- brew install --build-from-source maven
+- brew reinstall --build-from-source *
