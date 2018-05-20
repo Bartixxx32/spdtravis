@@ -3,7 +3,18 @@ dist: trusty
 language: bash
 script:
 - sudo apt update -y
-- sudo apt-get install build-essential curl file git
-- git clone https://github.com/Linuxbrew/brew.git ~/.linuxbrew
-- export HOMEBREW_FORCE_VENDOR_RUBY=1
-- brew install hello
+- sudo yum install -y \
+        autoconf automake19 libtool gettext \
+        git scons cmake flex bison \
+        libcurl-devel curl \
+        ncurses-devel ruby bzip2-devel expat-devel
+- git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
+- export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib64/pkgconfig:/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PATH
+- export LINUXBREWHOME=$HOME/.linuxbrew
+- export PATH=$LINUXBREWHOME/bin:$PATH
+- export MANPATH=$LINUXBREWHOME/man:$MANPATH
+- export PKG_CONFIG_PATH=$LINUXBREWHOME/lib64/pkgconfig:$LINUXBREWHOME/lib/pkgconfig:$PKG_CONFIG_PATH
+- export LD_LIBRARY_PATH=$LINUXBREWHOME/lib64:$LINUXBREWHOME/lib:$LD_LIBRARY_PATH
+- which brew
+- echo $PKG_CONFIG_PATH
+- brew search xml
