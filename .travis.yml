@@ -2,9 +2,6 @@ sudo: false
 dist: trusty
 language: bash
 script:
+- sudo apt update -y
 - sudo apt install linuxbrew-wrapper -y
 - brew install hello
-
-addons:
-  apt:
-    update: true
