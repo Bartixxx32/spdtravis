@@ -4,10 +4,10 @@ language: bash
 script:
 - sudo apt update -y
 - sudo apt-get install -y build-essential make cmake scons curl git \
-                               ruby autoconf automake autoconf-archive \
-                               gettext libtool flex bison \
-                               libbz2-dev libcurl4-openssl-dev \
-                               libexpat-dev libncurses-dev
+                               autoconf automake autoconf-archive \
+                               libtool flex bison \
+                               libcurl4-openssl-dev \
+                               libncurses-dev
 - git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
 - export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib64/pkgconfig:/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PATH
 - export LINUXBREWHOME=$HOME/.linuxbrew
