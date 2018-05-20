@@ -2,5 +2,5 @@ sudo: false
 dist: trusty
 language: bash
 script:
-- echo | sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+- sudo apt install linuxbrew-wrapper -y
 - brew install hello
