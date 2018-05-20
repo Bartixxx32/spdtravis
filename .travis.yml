@@ -5,6 +5,6 @@ script:
 - sudo apt install linuxbrew-wrapper -y
 - brew install hello
 
-  addons:
-    apt:
-      update: true
+addons:
+  apt:
+    update: true
