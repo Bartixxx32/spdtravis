@@ -7,7 +7,7 @@ language: bash
 
 script:
 
-- wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_013_all_1805241623_307e5a9d38ed49fe.zip -O one.zip
+- wget -q http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_013_all_1805241623_307e5a9d38ed49fe.zip -O one.zip
 
 - unzip one.zip
 
