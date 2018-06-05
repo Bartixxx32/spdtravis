@@ -5,7 +5,7 @@ language: bash
 
 script:
 
-- sudo bash <(curl -Ss https://my-netdata.io/kickstart.sh)
+- bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 
 notifications:
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
