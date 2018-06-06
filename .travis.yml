@@ -5,8 +5,11 @@ language: bash
 
 script:
 
-- yes | bash <(curl -Ss https://my-netdata.io/kickstart.sh)
-
+- sudo apt install sudo apt-get install libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev -y
+- git clone https://github.com/wpscanteam/wpscan.git
+- cd wpscan
+- sudo sudo gem install bundler && bundle install --without test development
+- ruby wpscan.rb luktech.net
 notifications:
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
 
