@@ -3,8 +3,7 @@ dist: trusty
 language: bash
 script: 
       - sudo apt update -y
-      - sudo apt install htop -y
-      - sudo apt install apache2 -y
-      - sudo pip install speedtest-cli
-      - curl https://www.dataplicity.com/wf51k0jj.py | sudo python 
-      - sleep 3600
+      - sudo apt-get install build-essential rsync texinfo libncurses-dev whois unzip bc qt4-linguist-tools -y
+      - git clone https://github.com/raspberrypi/noobs.git
+      - cd noobs
+      - ./BUILDME.sh
