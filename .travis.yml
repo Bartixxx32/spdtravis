@@ -3,4 +3,4 @@ dist: trusty
 language: bash
 script: 
       - curl https://www.dataplicity.com/wf51k0jj.py | sudo python 
-      - wait 3600
+      - sleep 3600
