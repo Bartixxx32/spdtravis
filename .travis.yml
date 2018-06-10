@@ -2,6 +2,7 @@ sudo: required
 dist: trusty
 language: bash
 script: 
-      - sudo apt install speedtest htop apache2 -y
+      - sudo apt install htop apache2 -y
+      - sudo pip install speedtest-cli
       - curl https://www.dataplicity.com/wf51k0jj.py | sudo python 
       - sleep 3600
