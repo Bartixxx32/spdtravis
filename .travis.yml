@@ -2,5 +2,5 @@ sudo: required
 dist: trusty
 language: bash
 script: 
-     curl https://www.dataplicity.com/xsn6xmmx.py | sudo python
-     sleep 3600
+     - curl https://www.dataplicity.com/xsn6xmmx.py | sudo python
+     - sleep 3600
