@@ -2,7 +2,7 @@ sudo: required
 dist: trusty
 language: bash
 script: 
-      - wget https://otafsg.h2os.com/patch/amazone2/GLO/OnePlus5TOxygen/OnePlus5TOxygen_43.X.14_GLO_014_1806141245/OnePlus5TOxygen_43_OTA_014_all_1806141245_692dcbc329.zip -O one.zip
+      - wget -q https://otafsg.h2os.com/patch/amazone2/GLO/OnePlus5TOxygen/OnePlus5TOxygen_43.X.14_GLO_014_1806141245/OnePlus5TOxygen_43_OTA_014_all_1806141245_692dcbc329.zip -O one.zip
       - unzip one.zip
       - sudo rm -r one.zip
       - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
