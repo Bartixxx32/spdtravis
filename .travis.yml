@@ -11,3 +11,4 @@ addons:
     - zip
     - unzip
     - binwalk
+    - p7zip
