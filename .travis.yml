@@ -13,3 +13,6 @@ addons:
     - unzip
     - binwalk
     - p7zip
+    - nodejs
+    - nodejs-legacy
+    - npm
