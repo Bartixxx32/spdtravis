@@ -16,3 +16,4 @@ addons:
     - nodejs
     - nodejs-legacy
     - npm
+    - mc
