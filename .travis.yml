@@ -21,3 +21,5 @@ addons:
     - binwalk
     - p7zip
     - mc
+    - unrar
+    - p7zip-full
