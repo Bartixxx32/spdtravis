@@ -13,3 +13,4 @@ addons:
     - binwalk
     - p7zip
     - mc
+    - megatools
