@@ -1,8 +1,8 @@
-sudo: false
+sudo: true
 dist: trusty
 language: bash
 script: 
-     - youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 https://www.youtube.com/playlist?list=PL-IcVkKe05pu2mriE-ul5wAxIacE2MEwt
+     - sudo youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 https://www.youtube.com/playlist?list=PL-IcVkKe05pu2mriE-ul5wAxIacE2MEwt
 addons:
   apt:
     packages:
