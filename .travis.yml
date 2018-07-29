@@ -1,25 +1,9 @@
-sudo: required
+sudo: false
 dist: trusty
 language: bash
 script: 
-     - sudo apt-get install libtool libglib2.0-dev gobject-introspection libgmp3-dev nettle-dev asciidoc glib-networking openssl libcurl4-openssl-dev libssl-dev -y
-     - wget http://megatools.megous.com/builds/megatools-1.9.97.tar.gz
-     - zcat megatools-1.9.97.tar.gz > megatools-1.9.97.tar
-     - tar -xf megatools-1.9.97.tar
-     - cd megatools-1.9.97/
-     - ./configure
-     - make 
-     - sudo make install
-     - curl https://www.dataplicity.com/xsn6xmmx.py | sudo python
-     - travis_wait 3600 sleep 3600
-     - echo done
+     - youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 https://www.youtube.com/playlist?list=PL-IcVkKe05pu2mriE-ul5wAxIacE2MEwt
 addons:
   apt:
     packages:
-    - zip
-    - unzip
-    - binwalk
-    - p7zip
-    - mc
-    - unrar
-    - p7zip-full
+    - youtube-dl
