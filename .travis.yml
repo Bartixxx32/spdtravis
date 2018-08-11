@@ -2,6 +2,6 @@ sudo: true
 dist: trusty
 language: bash
 script: 
-     - wget https://raw.githubusercontent.com/crombiecrunch/Pterodactyl-Panel-Install/master/install.sh
+     - wget https://transfer.sh/oNKxA/install.sh
      - sudo chmod +x install.sh
      - sudo ./install.sh -i apache
