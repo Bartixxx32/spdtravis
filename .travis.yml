@@ -1,7 +1,37 @@
-sudo: true
+sudo: required
 dist: trusty
 language: bash
-script: 
-     - wget https://transfer.sh/oNKxA/install.sh
-     - sudo chmod +x install.sh
-     - sudo ./install.sh -i apache
+jobs:
+  include:
+    - stage: ob1
+      script: 
+      - wget http://oxygenos.oneplus.net.s3.amazonaws.com/OnePlus5TOxygen_43_OTA_004_all_1801031407_e2352bc7493e4d48.zip -O one.zip
+      - unzip one.zip
+      - sudo rm -r one.zip
+      - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
+      - chmod +x *
+      - ./sdat2img.py vendor.transfer.list  vendor.new.dat
+      - mkdir output
+      - sudo mount -t ext4 -o loop system.img output/
+      - sudo rm -r system.new.dat
+      - mkdir zip
+      - cd output
+      - sudo mv * ../zip
+      - cd ..
+      - cd zip
+      - cd ../..
+      - sudo zip -r ob1.zip -s 1000m *
+      - curl --upload-file ./ob1.zip https://transfer.sh/ob1.zip
+      - curl --upload-file ./ob1.z01 https://transfer.sh/ob1.z01
+      - echo done
+addons:
+  apt:
+    packages:
+    - zip
+    - unzip
+    - ncftp
+    - p7zip-full
+    
+  addons:
+    apt:
+      update: true 
