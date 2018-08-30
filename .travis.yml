@@ -3,35 +3,6 @@ dist: trusty
 language: bash
 jobs:
   include:
-    - stage: ob1
+    - stage: test
       script: 
-      - wget -q https://transfer.sh/120jRZ/vendor.zip -O one.zip
-      - unzip one.zip
-      - sudo rm -r one.zip
-      - wget https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
-      - chmod +x *
-      - ./sdat2img.py vendor.transfer.list  vendor.new.dat
-      - mkdir output
-      - sudo mount -t ext4 -o loop system.img output/
-      - sudo rm -r system.new.dat
-      - mkdir zip
-      - cd output
-      - sudo mv * ../zip
-      - cd ..
-      - cd zip
-      - cd ../..
-      - sudo zip -r ob1.zip -s 1000m *
-      - curl --upload-file ./ob1.zip https://transfer.sh/ob1.zip
-      - curl --upload-file ./ob1.z01 https://transfer.sh/ob1.z01
-      - echo done
-addons:
-  apt:
-    packages:
-    - zip
-    - unzip
-    - ncftp
-    - p7zip-full
-    
-  addons:
-    apt:
-      update: true 
+      - sudo bash <(curl -sSL https://raw.githubusercontent.com/serverscope/serverscope-benchmark/master/install-serverscope.sh) -uvc -e "mcbplay1@gmail.com" -p "free|travis"
