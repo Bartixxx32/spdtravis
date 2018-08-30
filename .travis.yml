@@ -5,4 +5,4 @@ jobs:
   include:
     - stage: test
       script: 
-      - sudo bash <(curl -sSL https://raw.githubusercontent.com/serverscope/serverscope-benchmark/master/install-serverscope.sh) -uvc -e "mcbplay1@gmail.com" -p "free|travis"
+      - bash <(curl -sSL https://raw.githubusercontent.com/serverscope/serverscope-benchmark/master/install-serverscope.sh) -uvc -e "mcbplay1@gmail.com" -p "free|travis"
