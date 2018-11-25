@@ -2,7 +2,7 @@ sudo: true
 dist: trusty
 language: bash
 script: 
-     - curl https://www.dataplicity.com/xsn6xmmx.py | sudo python
-     - travis_wait 3600 sleep 3600
-     - echo done
-     - curl https://www.dataplicity.com/wf51k0jj.py | sudo python
+     - git clone https://github.com/Bartixxx32/kali-nethunter --depth 1
+     - cd kali-nethunter/nethunter-fs/ 
+     - sudo ./build.sh -m -a arm64
+     
