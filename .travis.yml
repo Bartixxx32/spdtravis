@@ -1,8 +1,11 @@
-sudo: true
-dist: trusty
+sudo: required
+
 language: bash
-script: 
-     - git clone https://github.com/Bartixxx32/kali-nethunter --depth 1
-     - cd kali-nethunter/nethunter-fs/ 
-     - sudo ./build.sh -m -a arm64
-     
+
+services:
+  - docker
+
+script:
+- git clone https://github.com/Bartixxx32/docker-ubuntu-vnc-desktop.git
+- cd docker-ubuntu-vnc-desktop
+- docker build . --tag test
