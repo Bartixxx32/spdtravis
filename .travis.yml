@@ -9,4 +9,4 @@ script:
 - git clone https://github.com/phhusson/treble_experimentations
 - cd treble_experimentations
 - mkdir Lineage; cd Lineage
-- y | bash ../treble_experimentations/build-dakkar.sh rr 
+- bash y | ../treble_experimentations/build-dakkar.sh rr 
