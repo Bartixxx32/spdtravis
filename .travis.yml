@@ -7,10 +7,5 @@ services:
 
 script:
 - git clone https://github.com/phhusson/treble_experimentations
-- cd treble_experimentations
+- mkdir Lineage; cd Lineage
 - bash ../treble_experimentations/build-rom.sh android-8.1 lineage
-- docker build -t treble docker/
-- docker container create --name treble treble
-- wget https://transfer.sh/vpjmL/cos.sh
-- chmod +x cos.sh
-- ./cos.sh
