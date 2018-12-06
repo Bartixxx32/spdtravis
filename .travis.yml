@@ -6,6 +6,9 @@ services:
   - docker
 
 script:
-- git clone https://github.com/Bartixxx32/docker-ubuntu-vnc-desktop.git
-- cd docker-ubuntu-vnc-desktop
-- docker build . --tag test
+- git clone https://github.com/phhusson/treble_experimentations
+- cd treble_experimentations
+- bash ../treble_experimentations/build-rom.sh android-8.1 lineage
+- docker build -t treble docker/
+- docker container create --name treble treble
+- docker run -ti \ -v $(pwd):/treble \ -v $(pwd)/../treble_output:/treble_output \ -w /treble_output \ treble \ /bin/bash /treble/build-dakkar.sh rr \ arm-aonly-gapps-su \ arm64-ab-go-nosu
