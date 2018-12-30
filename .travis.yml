@@ -6,7 +6,7 @@ services:
   - docker
 
 script:
-- git clone https://github.com/phhusson/treble_experimentations
-- cd treble_experimentations
-- mkdir Lineage; cd Lineage
-- yes | bash ../treble_experimentations/build-dakkar.sh rr 
+- git clone https://github.com/Bartixxx32/kali-linux-full-container/
+- cd kali-linux-full-container
+- sudo docker build . --tag test
+- sudo docker run test
