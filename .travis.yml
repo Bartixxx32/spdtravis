@@ -6,7 +6,4 @@ services:
   - docker
 
 script:
-- git clone https://github.com/Bartixxx32/kali-linux-full-container/
-- cd kali-linux-full-container
-- sudo docker build . --tag test
-- sudo docker run test
+- sudo docker run bartixxx32/kali-linux-full:latest
