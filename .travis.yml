@@ -5,7 +5,7 @@ language: bash
 
 script:
 - sudo snap connect discord-bartixxx:gnome-3-26-1604 gnome-3-26-1604
-- sudo snap run discord-bartixxx
+- df -h
 
 addons:
   snaps:
