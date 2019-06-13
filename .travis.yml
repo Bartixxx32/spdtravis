@@ -1,9 +1,11 @@
 sudo: required
+dist: xenial
 
 language: bash
 
-services:
-  - docker
-
 script:
-- sudo docker run bartixxx32/kali-linux-full:latest
+- sudo snap run discord-bartixxx
+
+addons:
+  snaps:
+- discord-bartixxx
