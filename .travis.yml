@@ -4,8 +4,10 @@ dist: xenial
 language: bash
 
 script:
+- snap connect discord:gnome-3-26-1604 gnome-3-26-1604
 - sudo snap run discord-bartixxx
 
 addons:
   snaps:
     - discord-bartixxx
+    - gnome-3-26-1604
