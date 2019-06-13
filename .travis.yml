@@ -5,7 +5,6 @@ language: bash
 
 script:
 - sudo snap connect discord-bartixxx:gnome-3-26-1604 gnome-3-26-1604
-- env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/discord-bartixxx_discord.desktop /snap/bin/discord-bartixxx.discord %U
 
 addons:
   snaps:
